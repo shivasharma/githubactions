@@ -22,3 +22,6 @@ jobs:
         server: home562576484.1and1-data.host
         username: ${{secrets.ftp_username}}
         password: ${{ secrets.ftp_password }}
+        server-dir: /site/is436-1/
+        protocol: ftps
+        port: 22
