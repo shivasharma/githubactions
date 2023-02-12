@@ -21,5 +21,5 @@ jobs:
         username: ${{secrets.ftp_username}}
         password: ${{ secrets.ftp_password }}
         server-dir: /site/is436-1/
-        protocol: sftp
+        protocol: ftps
         port: 22
