@@ -24,4 +24,5 @@ jobs:
           local_path: './githubactions/*'
           remote_path: '/site/is436-1/'
           sftp_only: true
+          port: 22
 
