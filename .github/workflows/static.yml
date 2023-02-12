@@ -21,7 +21,7 @@ jobs:
           server: home562576484.1and1-data.host
           username: ${{secrets.ftp_username}}
           password: ${{ secrets.ftp_password }}
-          local_path: './githubactions/*'
+          local_path: './*'
           remote_path: '/site/is436-1/'
           sftp_only: true
 
