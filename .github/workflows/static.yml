@@ -13,15 +13,15 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with:
-        server: home562576484.1and1-data.host
-        username: ${{secrets.ftp_username}}
-        password: ${{ secrets.ftp_password }}
-        server-dir: /site/is436-1/
-        protocol: ftps
-        port: 22
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: home562576484.1and1-data.host
+          username: ${{secrets.ftp_username}}
+          password: ${{ secrets.ftp_password }}
+          local_path: './githubactions/*'
+          remote_path: '/site/is436-1/'
+          sftp_only: true
+
