@@ -18,7 +18,7 @@ jobs:
       - name: Deploy file
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: home562576484.1and1-data.host
+          server: gl.umbc.edu
           username: ${{secrets.ftp_username}}
           password: ${{ secrets.ftp_password }}
           local_path: './*'
