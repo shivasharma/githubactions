@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["lab5"]
 
 
 jobs:
@@ -22,6 +22,6 @@ jobs:
           username: ${{secrets.ftp_username}}
           password: ${{ secrets.ftp_password }}
           local_path: './*'
-          remote_path: './'
+          remote_path: '/afs/umbc.edu/users/s/s/ss12/pub/www/lab5'
           sftp_only: true
 
